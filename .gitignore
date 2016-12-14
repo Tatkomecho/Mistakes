@@ -1,29 +1,41 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <iostream>
+using namespace std;
+void InputArray(int n, int array[])
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter elements: ";
+        cin>>array[i];
+    }
+}
+int SortArray(int n, int array[])
+{
+    int swap,k,min;
+    for(int i=0;i<n-1;i++)
+        k=i;
+        min=array[i];
+        for(int j=i+1;j<n;j++)
+        if(array[j]<min)
+    {
+        swap=array[j];
+        array[j]=array[i];
+        array[i]=array[j];
+    }
+    for(k=0;k<n;k++)
+        cout<<array[k]<<"\n";
+}
+void DisplayArray(int n, int array[])
+{
+    for(int i=0;i<n;i++) cout<<array[i]<<"\n";
+}
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int main()
+{
+    int array[5],n;
+cout<<"Number of elements:";
+cin>>n;
+InputArray(n,array);
+SortArray[n,array];
+DisplayArray[n,array];
+return 0;
+}
